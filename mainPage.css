@@ -1,0 +1,38 @@
+.caixaHeader{
+
+    width: 100%;
+    height: 100px;
+    position: relative;
+    padding: 0px 5px;
+    background:url(backGround.png)
+}
+
+.blackBox{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background-color: #f8a836;
+}
+
+
+
+
+
+.nutriLogo{
+    display: inline-block;
+    position:relative;
+    width:  100px;
+    height: 100px;
+    margin: 0 auto;
+
+
+
+}
+
+
+
+
+
+
+
+
