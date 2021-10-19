@@ -53,21 +53,46 @@ header{
 
 .caixaPacientesAgendados{                      
 
-    position: relative;
-    width: 100%;
-    margin: 40px auto ;
-    top: 60px;
-
+    width: 60%;
+	height: 100%;
+	margin: 0 auto;
 }   
 
-h2{
+section{
+	margin: 2em 0;
+	overflow: hidden;
+}
 
-    text-align:left;
-    font-size: 3em ;
-    font-style:italic;
-    margin: 1em auto;
-    color: rgba(0, 0, 0, 0.829);
+section h2{
+	font-size: 3em;
+	display: block;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: .5em;
+}
   
+table{
+	width: 100%;
+	margin-bottom : .5em;
+    table-layout: fixed;
+
+}
+
+td, th {
+	padding: .7em;
+	margin: 0;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+th{
+	font-weight: bold;
+	background-color: #EEE;
 }
 
 
+label{
+	color: #555;
+	display: block;
+	margin-bottom: 2em;
+}

@@ -8,44 +8,101 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="mainPage.css">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
+   
 
 </head>
 
 <body>
 
-        <header>
+    <header>
 
-            <div class="caixaHeader">
-                <img class="nutriLogo" src="nutriLogo.png" alt="logo da nutriINt">
-                <h1><img class="nomeLogo" src="nomeLogo.png" alt="nome do logo nutriINt"></h1>
+        <div class="caixaHeader">
+            <img class="nutriLogo" src="nutriLogo.png" alt="logo da nutriINt">
+            <h1><img class="nomeLogo" src="nomeLogo.png" alt="nome do logo nutriINt"></h1>
 
+
+        </div>
+
+        <div class="caixaLaranja">
+
+        </div>
+    </header>
+
+
+    <main>
+        <section class="caixaPacientesAgendados">
+            <h2 class="tituloTabelaPacientes"> ➭ Pacientes agendados </h2>
+            
 
             </div>
 
-            <div class="caixaLaranja">
-              
-            </div>
-        </header>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Peso(Kg)</th>
+                        <th>Altura(m)</th>
+                        <th>Gordura Corporal(%)</th>
+                        <th>IMC</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-pacientes">
+                    <tr class="paciente"></tr>
+                    <td class="info-nome">Julia Cardoso</td>
+                    <td class="info-peso">65</td>
+                    <td class="info-altura">1,68</td>
+                    <td class="info-gordura">30</td>
+                    <td class="info-imc">0</td>
+                    </tr>
+
+                    <tr class="paciente"></tr>
+                    <td class="info-nome">Julio Alenos</td>
+                    <td class="info-peso">74</td>
+                    <td class="info-altura">1,77</td>
+                    <td class="info-gordura">20</td>
+                    <td class="info-imc">0</td>
+                    </tr>
 
 
-        <main>
-            <div class="caixaPacientesAgendados"> 
-         <h2> ➭ Pacientes agendados </h2>
-         <hr width = 100%>
+                    <tr class="paciente"></tr>
+                    <td class="info-nome">Rodrigo Camboja</td>
+                    <td class="info-peso">80</td>
+                    <td class="info-altura">1,72</td>
+                    <td class="info-gordura">45</td>
+                    <td class="info-imc">0</td>
+                    </tr>
 
-             </div>
+                    <tr class="paciente"></tr>
+                    <td class="info-nome">Leticia Fraga</td>
+                    <td class="info-peso">60</td>
+                    <td class="info-altura">1,72</td>
+                    <td class="info-gordura">25</td>
+                    <td class="info-imc">0</td>
+                    </tr>
 
-            <tabl>
-
-
+                    <tr class="paciente"></tr>
+                    <td class="info-nome">Jade Almeida </td>
+                    <td class="info-peso">70</td>
+                    <td class="info-altura">1,66</td>
+                    <td class="info-gordura">35</td>
+                    <td class="info-imc">0</td>
+                    </tr>
+                </tbody>
             </table>
-             
-        </main>
 
-        <footer>
-           <h3>rodape</h3>
+        </section>
 
-        </footer>
+    </main>
+
+    <footer>
+        <h3>rodape</h3>
+
+    </footer>
+
+    
+    <script src="mainPage.js"> 
+
+</script>
 </body>
 
 
