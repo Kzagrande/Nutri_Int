@@ -1,0 +1,98 @@
+
+
+body{
+    font-family: 'Inconsolata', monospace;
+}
+
+header{
+    margin-bottom: 20px;
+}
+.caixaHeader{
+
+    width: 100%;
+    height: 100px;
+    position: relative;
+    padding: 6px;
+    background:url(backGround.png)
+}
+
+
+.nutriLogo{
+    display: inline-block;
+    position:relative;
+    width:  100px;
+    height: 100px;
+    margin: 6 auto;
+    padding: 4px;
+  
+
+
+}
+
+.nomeLogo{
+    position: absolute;
+    display: inline-block;
+    width: 375px;
+    left: 800px;
+    margin: 6px auto 6px auto;
+    top: 2px;
+    padding: 4px;
+   
+    
+    
+}
+
+
+.caixaLaranja{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background-color: #f8a836;
+    margin: 0px 0 20px 0;
+}
+
+.caixaPacientesAgendados{                      
+
+    width: 60%;
+	height: 100%;
+	margin: 0 auto;
+}   
+
+section{
+	margin: 2em 0;
+	overflow: hidden;
+}
+
+section h2{
+	font-size: 3em;
+	display: block;
+	padding-bottom: .5em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: .5em;
+}
+  
+table{
+	width: 100%;
+	margin-bottom : .5em;
+    table-layout: fixed;
+
+}
+
+td, th {
+	padding: .7em;
+	margin: 0;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+th{
+	font-weight: bold;
+	background-color: #EEE;
+}
+
+
+label{
+	color: #555;
+	display: block;
+	margin-bottom: 2em;
+}
