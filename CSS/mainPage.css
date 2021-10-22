@@ -1,25 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-
+/* Define a font for all body */
 body{
     font-family: 'Inconsolata', monospace;
+    background-color: rgb(238, 238, 238);
 }
 
+/* margin bottom to create space between header and main  */
 header{
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 }
+
+/* container to agroup logo and nomeLogo */
 .caixaHeader{
 
     width: 100%;
-    height: 100px;
+    height: 94px;
     position: relative;
     padding: 6px;
-    background:url(backGround.jpg)
+    background:url(../Image/backGround.jpg);
 }
 
-
+/* nutri logo design */
 .nutriLogo{
     display: inline-block;
-    position:relative;
+    position:relative; /* related to your position  */
     width:  100px;
     height: 100px;
     margin: 6 auto;
@@ -28,9 +37,9 @@ header{
 
 
 }
-
+/* nomeLogo design */
 .nomeLogo{
-    position: absolute;
+    position: absolute; /* related a previos relative position   */
     display: inline-block;
     width: 375px;
     left: 800px;
@@ -42,7 +51,7 @@ header{
     
 }
 
-
+/* orange box design(future project) */
 .caixaLaranja{
     width: 100%;
     height: 50px;
@@ -55,23 +64,24 @@ header{
 .caixaPacientesAgendados{                      
 
     width: 60%;
-	height: 100%;
 	margin: 0 auto;
 }   
 
 section{
 	margin: 2em 0;
-	overflow: hidden;
+	overflow: hidden; /* HOW conte organize into table */
 }
 
+/* H2 design */
 section h2{
 	font-size: 3em;
 	display: block;
 	padding-bottom: .5em;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 2px solid  black;
 	margin-bottom: .5em;
 }
   
+/* talbe design */
 table{
 	width: 100%;
 	margin-bottom : .5em;
@@ -79,21 +89,33 @@ table{
 
 }
 
+/* td and th design */
 td, th {
 	padding: .7em;
 	margin: 0;
-	border: 1px solid #ccc;
+	border: 1px solid black;
 	text-align: center;
 }
 
 th{
 	font-weight: bold;
-	background-color: #EEE;
+	background-color:blanchedalmond;
 }
 
+/* label design */
 
-label{
-	color: #555;
-	display: block;
-	margin-bottom: 2em;
+
+.tabela-pacientes{
+    background-color: rgb(255, 255, 255);
+}
+
+.info-imc{
+   
+    font-weight: bolder;
+    
+    
+}
+
+.infoInvalida{
+    background-color: lightcoral;
 }
