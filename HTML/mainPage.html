@@ -7,11 +7,11 @@
     <!-- Html defaut head with refs for icon,google font -->
     <meta charser="UTF-8">
     <title>Nutr_int</title>
-    <link rel="icon" href="C:\Users\casag\Desktop\NutrInt_\Image\nutriLogo.ico" type="image/x-icon"> 
+    <link rel="icon" href="C:\Users\casag\Desktop\NutrInt_\Image\nutriLogo.ico" type="image/x-icon">
     <link rel="stylesheet" href="C:\Users\casag\Desktop\NutrInt_\CSS\reset.css">
     <link rel="stylesheet" href="C:\Users\casag\Desktop\NutrInt_\CSS\mainPage.css">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
-   
+
 
 </head>
 
@@ -21,7 +21,8 @@
         <!-- Header with two images, and a orange colum. -->
         <div class="caixaHeader">
             <img class="nutriLogo" src="C:\Users\casag\Desktop\NutrInt_\Image\nutriLogo.png" alt="logo da nutriINt">
-            <h1><img class="nomeLogo" src="C:\Users\casag\Desktop\NutrInt_\Image\nomeLogo.png" alt="nome do logo nutriINt"></h1>
+            <h1><img class="nomeLogo" src="C:\Users\casag\Desktop\NutrInt_\Image\nomeLogo.png"
+                    alt="nome do logo nutriINt"></h1>
 
         </div>
 
@@ -51,14 +52,14 @@
                         <th>IMC</th>
                     </tr>
                 </thead>
-                <tbody class ="tabela-pacientes" id="tabela-pacientes">
-                    <tr class="paciente" >
+                <tbody class="tabela-pacientes" id="tabela-pacientes">
+                    <tr class="paciente">
                         <td class="info-nome">Julia Cardoso</td>
                         <td class="info-peso">70</td>
                         <td class="info-altura">1.65</td>
                         <td class="info-gordura">0</td>
                         <td class="info-sexo">Feminino</td>
-                        <td class ="info-idade">17</td>
+                        <td class="info-idade">17</td>
                         <td class="info-imc">0</td>
                     </tr>
 
@@ -68,7 +69,7 @@
                         <td class="info-altura">1.77</td>
                         <td class="info-gordura">0</td>
                         <td class="info-sexo">Masculino</td>
-                        <td class ="info-idade">28</td>
+                        <td class="info-idade">28</td>
                         <td class="info-imc">0</td>
                     </tr>
 
@@ -77,9 +78,9 @@
                         <td class="info-nome">Rodrigo Camboja</td>
                         <td class="info-peso">63</td>
                         <td class="info-altura">1.75</td>
-                        <td class="info-gordura">0</td>                      
+                        <td class="info-gordura">0</td>
                         <td class="info-sexo">Masculino</td>
-                        <td class ="info-idade">22</td>
+                        <td class="info-idade">22</td>
                         <td class="info-imc">0</td>
                     </tr>
 
@@ -87,9 +88,9 @@
                         <td class="info-nome">Leticia Fraga</td>
                         <td class="info-peso">60</td>
                         <td class="info-altura">1.72</td>
-                        <td class="info-gordura">0</td>                      
+                        <td class="info-gordura">0</td>
                         <td class="info-sexo">Feminino</td>
-                        <td class ="info-idade">26</td>
+                        <td class="info-idade">26</td>
                         <td class="info-imc">0</td>
                     </tr>
 
@@ -99,7 +100,7 @@
                         <td class="info-altura">1.60</td>
                         <td class="info-gordura">0</td>
                         <td class="info-sexo">Feminino</td>
-                        <td class ="info-idade">22</td>
+                        <td class="info-idade">22</td>
                         <td class="info-imc">0</td>
                     </tr>
                 </tbody>
@@ -109,15 +110,53 @@
 
     </main>
 
+
+    <section class="containerFormulario">
+
+        <h2 class="tituloNovoPaciente"> Adicionar novo paciente </h2>
+        <form class="formNovoPaciente">
+
+            <label for="nomeSobrenome">Nome e Sobrenome</label>
+            <input id="nomeSobrenome" type="text" class="input-padrao" required>
+
+            <label for="peso">Peso</label>
+            <input id="peso" type="number" class="input-padrao" required placeholder="62.4">
+
+            <label for="altura">Altura</label>
+            <input id="altura" type="number" class="input-padrao" required placeholder="1.70">
+
+            <label for="idade">Idade</label>
+            <input id="idade" type="number" class="input-padrao" required placeholder="28">
+
+            <fieldset>
+
+                <legend>Qual foi o sexo atribuído a você no nascimento ?
+
+                    </p>
+
+                    <select class="selectSexo">
+
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                    </select>
+            </fieldset>
+
+            <input type="submit" valor="Enviar Formulário" class="enviarFormulario">
+
+
+
+    </section>
+    </form>
+
     <footer>
         <h3>rodape</h3>
 
     </footer>
 
     <!-- Link fo JavaScript  -->
-    <script src="C:\Users\casag\Desktop\NutrInt_\JavaScript\mainPage.js"> 
+    <script src="C:\Users\casag\Desktop\NutrInt_\JavaScript\mainPage.js">
 
-</script>
+    </script>
 </body>
 
 

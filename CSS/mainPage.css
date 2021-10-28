@@ -65,6 +65,8 @@ header{
 
     width: 60%;
 	margin: 0 auto;
+    
+
 }   
 
 section{
@@ -74,11 +76,12 @@ section{
 
 /* H2 design */
 section h2{
-	font-size: 3em;
+	font-size: 2.3em;
 	display: block;
 	padding-bottom: .5em;
-	border-bottom: 2px solid  black;
+	border-bottom: 2px solid  gray;
 	margin-bottom: .5em;
+    
 }
   
 /* talbe design */
@@ -86,6 +89,9 @@ table{
 	width: 100%;
 	margin-bottom : .5em;
     table-layout: fixed;
+    
+    
+    
 
 }
 
@@ -95,6 +101,7 @@ td, th {
 	margin: 0;
 	border: 1px solid black;
 	text-align: center;
+    overflow: hidden;
 }
 
 th{
@@ -119,3 +126,81 @@ th{
 .infoInvalida{
     background-color: lightcoral;
 }
+
+.containerFormulario{
+    width: 60%;
+	margin: 0 auto;
+    margin-top: 2px;
+   
+    position: relative;
+    
+}
+
+
+.formNovoPaciente{
+
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+form label, fieldset legend {
+
+    font-weight: bold;
+    
+   
+}
+
+
+.input-padrao {
+    display:block;
+    margin: 7px 0 20px 0;
+    padding: 10px 20px;
+    width: 50%;
+}
+
+.selectSexo{
+
+    width: 40%;
+    border: solid 2px #474544;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+
+
+
+.enviarFormulario {
+    width: 40%;
+    background: none;
+    border: solid 2px #474544;
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top: 1.2em;
+  }
+
+
+  
+.enviarFormulario:hover {
+    background: #f8a836;
+    color: #F2F3EB;
+    transition: 1s all;
+    width: 30%;
+    font-size: 1.2em;
+  }
+
+
