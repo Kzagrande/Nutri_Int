@@ -59,8 +59,8 @@
                             <th>Peso(Kg)</th>
                             <th>Altura(m)</th>
                             <th>Gordura Corporal(%)</th>
-                            <th>Sexo</th>
                             <th>Idade</th>
+                            <th>Sexo</th>
                             <th>IMC</th>
                         </tr>
                     </thead>
@@ -70,8 +70,8 @@
                             <td class="info-peso">70</td>
                             <td class="info-altura">1.65</td>
                             <td class="info-gordura">0</td>
-                            <td class="info-sexo">Feminino</td>
                             <td class="info-idade">17</td>
+                            <td class="info-sexo">Feminino</td>
                             <td class="info-imc">0</td>
                         </tr>
 
@@ -80,8 +80,8 @@
                             <td class="info-peso">74</td>
                             <td class="info-altura">1.77</td>
                             <td class="info-gordura">0</td>
-                            <td class="info-sexo">Masculino</td>
                             <td class="info-idade">28</td>
+                            <td class="info-sexo">Masculino</td>
                             <td class="info-imc">0</td>
                         </tr>
 
@@ -91,8 +91,8 @@
                             <td class="info-peso">63</td>
                             <td class="info-altura">1.75</td>
                             <td class="info-gordura">0</td>
-                            <td class="info-sexo">Masculino</td>
                             <td class="info-idade">22</td>
+                            <td class="info-sexo">Masculino</td>
                             <td class="info-imc">0</td>
                         </tr>
 
@@ -101,8 +101,8 @@
                             <td class="info-peso">60</td>
                             <td class="info-altura">1.72</td>
                             <td class="info-gordura">0</td>
-                            <td class="info-sexo">Feminino</td>
                             <td class="info-idade">26</td>
+                            <td class="info-sexo">Feminino</td>
                             <td class="info-imc">0</td>
                         </tr>
 
@@ -111,8 +111,8 @@
                             <td class="info-peso">60</td>
                             <td class="info-altura">1.60</td>
                             <td class="info-gordura">0</td>
-                            <td class="info-sexo">Feminino</td>
                             <td class="info-idade">22</td>
+                            <td class="info-sexo">Feminino</td>
                             <td class="info-imc">0</td>
                         </tr>
                     </tbody>
@@ -129,16 +129,16 @@
                 <form class="formNovoPaciente">
 
                     <label for="nomeSobrenome">Nome e Sobrenome</label>
-                    <input id="nomeSobrenome" type="text" class="input-padrao" required>
+                    <input id="nomeSobrenome" name="nome" type="text" class="input-padrao" required>
 
                     <label for="peso">Peso</label>
-                    <input id="peso" type="number" class="input-padrao" required placeholder="62.4">
+                    <input id="peso" name="peso" type="number" step="0.01" class="input-padrao" required placeholder="62.4">
 
                     <label for="altura">Altura</label>
-                    <input id="altura" type="number" class="input-padrao" required placeholder="1.70">
+                    <input id="altura" name="altura" type="number" step="0.01" class="input-padrao" required placeholder="1.70">
 
                     <label for="idade">Idade</label>
-                    <input id="idade" type="number" class="input-padrao" required placeholder="28">
+                    <input id="idade" name="idade" type="number" class="input-padrao" required placeholder="28">
 
                     <fieldset>
 
@@ -146,7 +146,7 @@
 
                             </p>
 
-                            <select class="selectSexo">
+                            <select name="sexo" class="selectSexo">
 
                                 <option>Masculino</option>
                                 <option>Feminino</option>
@@ -169,8 +169,9 @@
     </footer>
 
     <!-- Link fo JavaScript  -->
-    <script src="C:\Users\casag\Desktop\NutrInt_\JavaScript\mainPage.js">
-    </script>
+    <script src="C:\Users\casag\Desktop\NutrInt_\JavaScript\tabelaFixa.js"></script>
+    <script src="C:\Users\casag\Desktop\NutrInt_\JavaScript\form.js"></script>
+
 </body>
 
 
