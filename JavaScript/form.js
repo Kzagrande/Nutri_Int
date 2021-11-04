@@ -6,78 +6,96 @@ enviarForm.addEventListener("click", function(event) {
 
     var form = document.querySelector(".formNovoPaciente");
 
-    // Extract patient information from the form
-    var valorNome = form.nome.value;
-    var valorPeso = form.peso.value;
-    var valorAltura = form.altura.value;
-    var valorIdade = form.idade.value;
-    var valorSexo = form.sexo.value;
+
+    var coletaPaciente = registraFormPaciente(form);
+
+    var montaPacienteTr = montaTr(coletaPaciente);
 
 
-    // tranfor"Masculino and Feminino" in numbers
-    var tipoMasculino = "Masculino"
-    var tipoFeminino = "Feminino"
-
-
-    if (valorSexo == tipoMasculino) {
-        valorSexo = 1;
-    }
-
-    if (valorSexo == tipoFeminino) {
-        valorSexo = 0;
+    if (!validaPaciente(coletaPaciente.peso)) {
+        alert("paciente invalido")
+        return;
     }
 
 
 
 
-    // create and add patient Tr and TD
-    var novoPacienteTr = document.createElement("tr");
-
-    var nomeTd = document.createElement("td");
-    var pesoTd = document.createElement("td");
-    var alturaTd = document.createElement("td");
-    var gorduraTd = document.createElement("td");
-    var idadeTd = document.createElement("td");
-    var sexoTd = document.createElement("td");
-    var imcTd = document.createElement("td");
-
-    nomeTd.textContent = valorNome;
-    pesoTd.textContent = valorPeso;
-    alturaTd.textContent = valorAltura;
-    idadeTd.textContent = valorIdade;
-    imcTd.textContent = calculoImc(valorPeso, valorAltura);
-
-    //  Create IMC variable so we can calculate "calculoGordura"
-    var IMC = calculoImc(valorPeso, valorAltura);
-    gorduraTd.textContent = calculoGordura(IMC, valorIdade, valorSexo);
-
-
-    // Transform the number in "masculino ou feminino " again and add sexoTd.
-    if (valorSexo == 1) {
-        valorSexo = tipoMasculino;
-    }
-
-    if (valorSexo == 0) {
-        valorSexo = tipoFeminino;
-    }
-
-    sexoTd.textContent = valorSexo;
-
-
-    novoPacienteTr.appendChild(nomeTd);
-    novoPacienteTr.appendChild(pesoTd);
-    novoPacienteTr.appendChild(alturaTd);
-    novoPacienteTr.appendChild(gorduraTd);
-    novoPacienteTr.appendChild(idadeTd);
-    novoPacienteTr.appendChild(sexoTd);
-    novoPacienteTr.appendChild(imcTd);
-
-
-    // add a new patient to the table
     var tabela = document.querySelector("#tabela-pacientes")
-    tabela.appendChild(novoPacienteTr);
+    tabela.appendChild(montaPacienteTr);
 
-
+    form.reset();
 
 
 });
+
+
+function registraFormPaciente(form) {
+
+    var coletaPaciente = {
+
+        nome: form.nome.value,
+        peso: form.peso.value,
+        altura: form.altura.value,
+        idade: form.idade.value,
+        sexo: form.sexo.value,
+        imc: calculoImc(form.peso.value, form.altura.value),
+        gordura: calculoGordura(calculoImc(form.peso.value, form.altura.value), form.idade.value, form.sexo.value)
+
+    }
+    return coletaPaciente;
+
+}
+
+function montaTr(coletaPaciente) {
+
+
+    // create and add patient Tr and TD
+    var montaPacienteTr = document.createElement("tr");
+    montaPacienteTr.classList.add("paciente");
+
+    var nomeTd = montaTd(coletaPaciente.nome, "info-nome");
+    var pesoTd = montaTd(coletaPaciente.peso, "info-peso");
+    var alturaTd = montaTd(coletaPaciente.altura, "info-altura");
+    var gorduraTd = montaTd(coletaPaciente.gordura, "info-gordura");
+    var idadeTd = montaTd(coletaPaciente.idade, "info-idade");
+    var sexoTd = montaTd(coletaPaciente.sexo, "info-sexo");
+    var imcTd = montaTd(coletaPaciente.imc, "info-imc");
+
+    // tranfor"Masculino and Feminino" in numbers
+
+    //  Create IMC variable so we can calculate "calculoGordura"
+
+
+    montaPacienteTr.appendChild(nomeTd);
+    montaPacienteTr.appendChild(pesoTd);
+    montaPacienteTr.appendChild(alturaTd);
+    montaPacienteTr.appendChild(gorduraTd);
+    montaPacienteTr.appendChild(idadeTd);
+    montaPacienteTr.appendChild(sexoTd);
+    montaPacienteTr.appendChild(imcTd);
+
+    return montaPacienteTr;
+}
+
+function montaTd(dado, classe) {
+    var td = document.createElement("td");
+    td.textContent = dado;
+    td.classList.add(classe);
+
+    return td;
+}
+
+
+function validaPaciente(coletaPaciente) {
+
+    if (validaPeso(coletaPaciente.peso)) {;
+        return true;
+    } else {
+        return false;
+    }
+
+
+
+
+}
+// formatar os ifs da para calcular a gorduta em uma função e fazer funcionar

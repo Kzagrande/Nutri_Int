@@ -4,15 +4,12 @@ tituloPacientes.textContent = "Tabela IMC de pacientes"; // editing content of v
 
 
 
-
-
-var pacientes = document.querySelectorAll(".paciente"); // get id "Julia" and transforming into a variable
+var pacientes = document.querySelectorAll(".paciente"); // get class "paciente and transforming into a variable
 console.log(pacientes) // printing paciente content
 
-for (var i = 0; i < pacientes.length; i++) {
+for (var i = 0; i < pacientes.length; i++) { // creating a loop to add data to all items 
 
     var paciente = pacientes[i];
-
 
 
 
@@ -25,8 +22,6 @@ for (var i = 0; i < pacientes.length; i++) {
     var tdIMC = paciente.querySelector(".info-imc"); // get clas "info-imc" and transforming into a variable 
 
 
-
-
     var valorNome = tdNome.textContent; // get a text content of "tdPeso" and asigning to a new variable
     var valorPeso = tdPeso.textContent; // get a text content of "tdPeso" and asigning to a new variable
     var valorAltura = tdAltura.textContent; // get a text content of "tdAltura" and asigning to a new variable
@@ -34,30 +29,13 @@ for (var i = 0; i < pacientes.length; i++) {
     var valorSexo = tdSexo.textContent;
 
 
-
-
-    var tipoMasculino = "Masculino"
-    var tipoFeminino = "Feminino"
-
-    if (valorSexo == tipoMasculino) {
-        valorSexo = 1;
-    }
-    if (valorSexo == tipoFeminino) {
-        valorSexo = 0;
-    }
-
-    var sexoNumero = valorSexo
+    var pesoValido = validaPeso(valorPeso);
+    var alturaValida = validaAltura(valorAltura);
+    var idadeValida = validaIdade(valorIdade);
 
 
 
-    var pesoValido = true;
-    var alturaValida = true;
-    var idadeValida = true;
-
-
-
-
-    if (valorPeso < 2.0 || valorPeso > 500) {
+    if (!pesoValido) {
         alert("peso menor ou acima do possível ");
         pesoValido = false;
         tdPeso.textContent = "peso inválido";
@@ -65,7 +43,7 @@ for (var i = 0; i < pacientes.length; i++) {
         paciente.classList.add("infoInvalida")
     }
 
-    if (valorAltura < 0.50 || valorAltura > 2.80) {
+    if (!alturaValida) {
         alert("Altura menor ou acima do possível");
         alturaValida = false;
         tdAltura.textContent = "altura inválida";
@@ -73,7 +51,7 @@ for (var i = 0; i < pacientes.length; i++) {
     }
 
 
-    if (valorIdade < 1 || valorIdade > 116) {
+    if (!idadeValida) {
         alert("Idade menor ou acima do possível");
         idadeValida = false;
         tdIdade.textContent = "Idade inválida";
@@ -88,9 +66,51 @@ for (var i = 0; i < pacientes.length; i++) {
     }
 
     if (idadeValida) {
-        var gorduraCorporal = calculoGordura(IMC, valorIdade, sexoNumero); // termina depois// cria classe sexo e idade
+        var gorduraCorporal = calculoGordura(IMC, valorIdade, valorSexo); // termina depois// cria classe sexo e idade
         tdGordura.textContent = gorduraCorporal;
 
+    }
+
+}
+
+
+
+
+function validaPeso(peso) {
+
+    if (peso >= 2.0 && peso <= 500) {
+
+        return true;
+
+    } else {
+        return false;
+    }
+
+
+}
+
+function validaAltura(altura) {
+
+    if (altura >= 0.50 && altura <= 2.80) {
+
+        return true;
+
+    } else {
+        return false;
+    }
+
+
+}
+
+
+function validaIdade(idade) {
+
+    if (idade >= 1 && idade <= 116) {
+
+        return true;
+
+    } else {
+        return false;
     }
 
 }
@@ -105,10 +125,24 @@ function calculoImc(valorPeso, valorAltura) {
 
 }
 
-function calculoGordura(IMC, valorIdade, sexoNumero) {
+function calculoGordura(IMC, valorIdade, valorSexo) {
+
 
     var gorduraCorporal = 0;
-    gorduraCorporal = (1.20 * IMC) + (0.23 * valorIdade) - (10.8 * sexoNumero) - 5.4;
+
+    var tipoMasculino = "Masculino"
+    var tipoFeminino = "Feminino"
+
+    if (valorSexo == tipoMasculino) {
+        valorSexo = 1;
+    }
+    if (valorSexo == tipoFeminino) {
+        valorSexo = 0;
+    }
+
+    gorduraCorporal = (1.20 * IMC) + (0.23 * valorIdade) - (10.8 * valorSexo) - 5.4;
 
     return gorduraCorporal.toFixed(0.5);
+
+
 }
