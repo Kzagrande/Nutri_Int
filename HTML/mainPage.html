@@ -9,7 +9,7 @@
     <title>Nutr_int</title>
     <link rel="icon" href="C:\Users\casag\Desktop\NutrInt_\Image\nutriLogo.ico" type="image/x-icon">
     <link rel="stylesheet" href="C:\Users\casag\Desktop\NutrInt_\CSS\reset.css">
-    <link rel="stylesheet" href="C:\Users\casag\Desktop\NutrInt_\CSS\mainPage.css">
+    <link rel="stylesheet" href="C:\Users\casag\Desktop\NutrInt_\CSS\style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
 
 
@@ -45,12 +45,18 @@
 
     <main>
         <section class="sections">
+
             <!-- Main content with a title and  a table with infos about pacients  -->
             <section class="blocos" id="caixaPacientesAgendados">
                 <h2 class="tituloTabelaPacientes"> ➭ Pacientes agendados </h2>
 
-
+                <div class="containerFiltro">
+                    <label for="filtro-paciente" class="labelFiltro">Pesquise: </label>
+                    <input type="text" name="filtro-paciente" class="filtroPaciente" placeholder="filtre pacientes">
                 </div>
+
+
+
 
                 <table>
                     <thead>
@@ -117,6 +123,7 @@
                         </tr>
                     </tbody>
                 </table>
+                <button class="botaoImportar">Importar</button>
 
             </section>
 
@@ -126,6 +133,7 @@
             <section class="blocos" id="containerFormulario">
 
                 <h2 class="tituloNovoPaciente"> Adicionar novo paciente </h2>
+                <span id="mensagem-erro"></span>
                 <form class="formNovoPaciente">
 
                     <label for="nomeSobrenome">Nome e Sobrenome</label>
@@ -171,6 +179,8 @@
     <!-- Link fo JavaScript  -->
     <script src="C:\Users\casag\Desktop\NutrInt_\JavaScript\tabelaFixa.js"></script>
     <script src="C:\Users\casag\Desktop\NutrInt_\JavaScript\form.js"></script>
+    <script src="C:\Users\casag\Desktop\NutrInt_\JavaScript\remove.js"></script>
+    <script src="C:\Users\casag\Desktop\NutrInt_\JavaScript\filtro.js"></script>
 
 </body>
 

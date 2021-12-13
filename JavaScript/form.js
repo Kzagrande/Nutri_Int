@@ -12,16 +12,10 @@ enviarForm.addEventListener("click", function(event) {
     var montaPacienteTr = montaTr(coletaPaciente);
 
 
-    if (!validaPaciente(coletaPaciente.peso)) {
-        alert("paciente invalido")
-        return;
-    }
+    var tabela = document.querySelector("#tabela-pacientes");
 
-
-
-
-    var tabela = document.querySelector("#tabela-pacientes")
     tabela.appendChild(montaPacienteTr);
+
 
     form.reset();
 
@@ -61,9 +55,8 @@ function montaTr(coletaPaciente) {
     var sexoTd = montaTd(coletaPaciente.sexo, "info-sexo");
     var imcTd = montaTd(coletaPaciente.imc, "info-imc");
 
-    // tranfor"Masculino and Feminino" in numbers
 
-    //  Create IMC variable so we can calculate "calculoGordura"
+
 
 
     montaPacienteTr.appendChild(nomeTd);
@@ -74,7 +67,16 @@ function montaTr(coletaPaciente) {
     montaPacienteTr.appendChild(sexoTd);
     montaPacienteTr.appendChild(imcTd);
 
-    return montaPacienteTr;
+
+    if (validaPeso(coletaPaciente.peso) && validaAltura(coletaPaciente.altura) && validaIdade(coletaPaciente.idade)) {
+
+        return montaPacienteTr;
+    } else {
+        alert("Informações inválidas, verifique os valores inseridos")
+    }
+
+
+
 }
 
 function montaTd(dado, classe) {
@@ -82,20 +84,19 @@ function montaTd(dado, classe) {
     td.textContent = dado;
     td.classList.add(classe);
 
+
+
+
     return td;
 }
 
 
-function validaPaciente(coletaPaciente) {
-
-    if (validaPeso(coletaPaciente.peso)) {;
-        return true;
-    } else {
-        return false;
-    }
 
 
 
 
-}
-// formatar os ifs da para calcular a gorduta em uma função e fazer funcionar
+
+
+
+
+// fazer funcionar a  funcão validaPaciente
