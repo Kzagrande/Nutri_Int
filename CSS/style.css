@@ -234,3 +234,21 @@
     #botaoImportar {
         text-align: center;
     }
+    
+    .botaoImportar {
+        width: 200px;
+        height: 30px;
+        padding: 2px;
+        background-color: #f8a836;
+        color: white;
+        transition: 1s all;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 1s;
+        margin-left: 20px;
+    }
+    
+    .botaoImportar:hover {
+        width: 250px;
+        height: 40px;
+    }

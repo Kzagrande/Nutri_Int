@@ -3,24 +3,23 @@ var enviarForm = document.querySelector(".enviarFormulario")
 enviarForm.addEventListener("click", function(event) {
     event.preventDefault();
 
-
     var form = document.querySelector(".formNovoPaciente");
-
-
     var coletaPaciente = registraFormPaciente(form);
-
-    var montaPacienteTr = montaTr(coletaPaciente);
-
-
-    var tabela = document.querySelector("#tabela-pacientes");
-
-    tabela.appendChild(montaPacienteTr);
+    adicionaPacientenaTabela(coletaPaciente);
 
 
     form.reset();
 
 
 });
+
+function adicionaPacientenaTabela(coletaPaciente) {
+
+    var montaPacienteTr = montaTr(coletaPaciente);
+    var tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(montaPacienteTr);
+
+}
 
 
 function registraFormPaciente(form) {
@@ -54,8 +53,6 @@ function montaTr(coletaPaciente) {
     var idadeTd = montaTd(coletaPaciente.idade, "info-idade");
     var sexoTd = montaTd(coletaPaciente.sexo, "info-sexo");
     var imcTd = montaTd(coletaPaciente.imc, "info-imc");
-
-
 
 
 
